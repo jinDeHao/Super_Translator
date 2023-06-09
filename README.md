@@ -1,0 +1,1 @@
+#A translator made by omar idhmaid
