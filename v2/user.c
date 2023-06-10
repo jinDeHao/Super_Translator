@@ -1,8 +1,8 @@
 #include "trans.h"
 
-void gettran(trans **dic)
+void gettran(trans **dic, char *tranfrom)
 {
-    char *tranfrom = NULL, *tranto = NULL, *agree = NULL;
+    char *tranto = NULL, *agree = NULL;
     size_t weight, _weight, aweight, nr;
 
     write (STDOUT_FILENO, "I don't know, can you tech me?(yes/no)\n", 39);
@@ -12,23 +12,16 @@ void gettran(trans **dic)
         agree[nr - 1] = '\0';
         if (!(strcmp(agree, "yes")))
         {
-            write (STDOUT_FILENO, "give me the English word:\n", 26);
-            if ((nr = getline(&tranfrom, &weight, stdin)) != -1)
+            write (STDOUT_FILENO, "add the translation: \n", 22);
+            if ((nr = getline(&tranto, &_weight, stdin)) != -1)
             {
-                tranfrom[nr - 1] = '\0';
-                write (STDOUT_FILENO, "add the translation: \n", 22);
-                if ((nr = getline(&tranto, &_weight, stdin)) != -1)
-                {
-                    tranto[nr - 1] = '\0';
-                    insert_word(dic, tranfrom, tranto);
-                }
+                tranto[nr - 1] = '\0';
+                insert_word(dic, tranfrom, tranto);
             }
             write (STDOUT_FILENO, "Thank you very match\n", 21);
         }
     }
     free(agree);
-    if (tranfrom)
-        free(tranfrom);
     if (tranto)
         free(tranto);
 }

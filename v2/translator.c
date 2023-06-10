@@ -19,7 +19,7 @@ void main(void)
         }
         to = check_dic(from, &dic);
         if (!to)
-            gettran(&dic);
+            gettran(&dic, from);
         if (from)
             free(from);
         output(to);

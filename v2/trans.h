@@ -19,7 +19,7 @@ char *getword();
 void output(char *Desplay);
 char *check_dic(char *word, trans **dic);
 void saveAndFree(trans *dic);
-void gettran(trans **dic);
+void gettran(trans **dic, char *tranfrom);
 trans *insert_word(trans **head, char *fword, char *tword);
 
 #endif
