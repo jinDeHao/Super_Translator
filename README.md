@@ -33,10 +33,6 @@ Contributions to this project are welcome! If you come across any bugs or have i
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Acknowledgements
-
-- [OpenAI](https://openai.com) for providing the language model behind this program.
-
 ## About the Author
 
 This English to Tachlhit Translator program is developed by Omar Id Hmaid. Connect with me on [LinkedIn](https://www.linkedin.com/in/omaridhmaid) for more projects and collaborations.
