@@ -1,24 +1,27 @@
 #include "trans.h"
 
-void gettran(trans **dic)
+void gettran(trans **dic, char *tranfrom)
 {
-    char *tranfrom = NULL, *tranto = NULL;
-    size_t weight, _weight, nr;
+    char *tranto = NULL, *agree = NULL;
+    size_t weight, _weight, aweight, nr;
 
-    write (STDOUT_FILENO, "I don't know, can you tech me?\n", 31);
-    write (STDOUT_FILENO, "give me the English word:\n", 26);
-    if ((nr = getline(&tranfrom, &weight, stdin)) != -1)
+    write (STDOUT_FILENO, "I don't know, can you tech me?(yes/no)\n", 39);
+    nr = getline(&agree, &aweight, stdin);
+    if (nr != -1)
     {
-        tranfrom[nr - 1] = '\0';
-        write (STDOUT_FILENO, "add the translation: \n", 22);
-        if ((nr = getline(&tranto, &_weight, stdin)) != -1)
+        agree[nr - 1] = '\0';
+        if (!(strcmp(agree, "yes")))
         {
-            tranto[nr - 1] = '\0';
-            add_word(dic, tranfrom, tranto);
+            write (STDOUT_FILENO, "add the translation: \n", 22);
+            if ((nr = getline(&tranto, &_weight, stdin)) != -1)
+            {
+                tranto[nr - 1] = '\0';
+                insert_word(dic, tranfrom, tranto);
+            }
+            write (STDOUT_FILENO, "Thank you very match\n", 21);
         }
     }
-    write (STDOUT_FILENO, "Thank you very match\n", 21);
-    free(tranfrom);
+    free(agree);
     if (tranto)
         free(tranto);
 }
@@ -112,11 +115,11 @@ void saveAndFree(trans *dic)
 
 trans *import_dic()
 {
-    trans *dic;
-    char *tmp, *line = NULL, *tmpto, *tmpfrom, *del = ":";
+    trans *dic = NULL;
+    char *line = NULL, *tmpto = NULL, *tmpfrom = NULL, *del = ":";
     size_t fd, weight, nr;
 
-    fd = open("ENGLISH_TACHLHET", O_RDONLY);
+    fd = open("ENGLISH_TACHLHET", O_RDONLY | O_CREAT, 0644);
     if (fd >= 0)
     {
         FILE *file = fdopen(fd, "r");
@@ -125,7 +128,7 @@ trans *import_dic()
             line[nr - 1] = '\0';
             tmpfrom = strtok(line, del);
             tmpto = strtok(NULL, del);
-            add_word(&dic, tmpfrom, tmpto);
+            dic = insert_word(&dic, tmpfrom, tmpto);
         }
         free(line);
         close(fd);

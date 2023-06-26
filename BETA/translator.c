@@ -6,7 +6,6 @@ void main(void)
     char *from, *to;
 
     dic = import_dic();
-    // add_word(&dic, "How are you", "Manzakin");
     while (true)
     {
         to = NULL;
@@ -19,7 +18,7 @@ void main(void)
         }
         to = check_dic(from, &dic);
         if (!to)
-            gettran(&dic);
+            gettran(&dic, from);
         if (from)
             free(from);
         output(to);
