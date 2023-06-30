@@ -1,11 +1,11 @@
-# English to Tachlhit Translator
+# English to Tashelhit Translator
 
-Welcome to the English to Tachlhit Translator! This program allows you to easily translate English words into Tachlhit, an indigenous language of Morocco. Whether you're curious about Tachlhit or want to contribute to its growth, this program provides an interactive and educational experience.
+Welcome to the English to Tashelhit Translator! This program allows you to easily translate English words into Tashelhit, an indigenous language of Morocco. Whether you're curious about Tashelhit or want to contribute to its growth, this program provides an interactive and educational experience.
 
 ## Features
 
-- Translate English words to Tachlhit
-- Learn new Tachlhit words and expand the program's database
+- Translate English words to Tashelhit
+- Learn new Tashelhit words and expand the program's database
 - Save and import translations for future sessions
 - User-friendly interface and simple instructions
 
@@ -21,7 +21,7 @@ To run the program, you need to have a C compiler installed on your system.
 2. Compile the C program using your preferred C compiler.
 3. Run the compiled program.
 4. Enter an English word when prompted.
-5. If the program knows the translation, it will display the Tachlhit equivalent.
+5. If the program knows the translation, it will display the Tashelhit equivalent.
 6. If the program doesn't recognize the word, it will ask you to teach it the translation.
 7. To save your translations and exit, type "$$" when prompted.
 
@@ -35,5 +35,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## About the Author
 
-This English to Tachlhit Translator program is developed by Omar Id Hmaid. Connect with me on [LinkedIn](https://www.linkedin.com/in/omar-id-hmaid) for more projects and collaborations.
+This English to Tashelhit Translator program is developed by Omar Id Hmaid. Connect with me on [LinkedIn](https://www.linkedin.com/in/omar-id-hmaid) for more projects and collaborations.
 
