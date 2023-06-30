@@ -35,5 +35,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## About the Author
 
-This English to Tashelhit Translator program is developed by Omar Id Hmaid. Connect with me on [LinkedIn](https://www.linkedin.com/in/omar-id-hmaid) for more projects and collaborations.
+This English to Tashelhit Translator program is developed by Omar Idhmaid. Connect with me on [LinkedIn](https://www.linkedin.com/in/omar-id-hmaid) for more projects and collaborations.
 
