@@ -21,5 +21,8 @@ char *check_dic(char *word, trans **dic);
 void saveAndFree(trans *dic);
 void gettran(trans **dic, char *tranfrom);
 trans *insert_word(trans **head, char *fword, char *tword);
+int builtAction(char *from, trans *dic);
+char *nSASE(char *string, int len);
+char *upperC(char *addr);
 
 #endif

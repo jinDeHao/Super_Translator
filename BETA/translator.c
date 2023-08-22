@@ -1,6 +1,6 @@
 #include "trans.h"
 
-void main(void)
+int main(void)
 {
     trans *dic = NULL;
     char *from, *to;
@@ -10,12 +10,8 @@ void main(void)
     {
         to = NULL;
         from = getword();
-        if (!(strcmp(from, "$$")))
-        {
-            saveAndFree(dic);
-            free(from);
-            break;
-        }
+        if (builtAction(from, dic))
+            continue;
         to = check_dic(from, &dic);
         if (!to)
             gettran(&dic, from);
@@ -23,4 +19,5 @@ void main(void)
             free(from);
         output(to);
     }
+    return (0);
 }
